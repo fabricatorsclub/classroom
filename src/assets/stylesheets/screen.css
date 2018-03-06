@@ -150,36 +150,35 @@ body,
 
 /* line 64, ../../../sass/partials/layout.scss */
 .sidebar {
-  width: 300px;
   padding: 8px 0;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+  display: inline-block;
 }
-/* line 72, ../../../sass/partials/layout.scss */
+/* line 69, ../../../sass/partials/layout.scss */
 .sidebar:hover > a, .sidebar:hover > span {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 78, ../../../sass/partials/layout.scss */
+/* line 75, ../../../sass/partials/layout.scss */
+.sidebar > span, .sidebar > a {
+  display: inline-block;
+  color: #211842;
+  padding: 8px 15px;
+  width: 100%;
+  text-align: center;
+}
+/* line 84, ../../../sass/partials/layout.scss */
 .sidebar > span {
-  text-align: right;
   font-size: 12px;
   font-weight: bold;
-  color: #211842;
-  display: inline-block;
   margin-top: 15px;
-  padding: 8px 15px 0;
+  padding-bottom: 0;
   text-transform: uppercase;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 90, ../../../sass/partials/layout.scss */
+/* line 93, ../../../sass/partials/layout.scss */
 .sidebar > a {
-  padding: 8px 15px;
-  text-align: right;
   text-decoration: none;
-  color: #211842;
   font-size: 14px;
 }
 /* line 97, ../../../sass/partials/layout.scss */
@@ -198,14 +197,15 @@ body,
 .wrapper {
   flex: 1;
   display: flex;
+  flex-direction: column;
   border: 15px solid #845af7;
+  overflow: auto;
 }
 
-/* line 113, ../../../sass/partials/layout.scss */
+/* line 115, ../../../sass/partials/layout.scss */
 .contentWrapper {
-  flex: 1;
-  margin-left: 150px;
-  overflow: auto;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 /* line 1, ../../../sass/partials/components.scss */
@@ -220,12 +220,12 @@ h2 {
   font-size: 40px;
   line-height: 45px;
   font-weight: bold;
-  margin: 0 0 25px;
+  margin: 0 auto 25px;
   max-width: 650px;
 }
 
 /* line 15, ../../../sass/partials/components.scss */
 p {
-  margin: 0 0 25px;
+  margin: 0 auto 25px;
   max-width: 650px;
 }

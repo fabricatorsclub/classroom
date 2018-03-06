@@ -62,11 +62,8 @@ body,
 }
 
 .sidebar {
-  width: 300px;
   padding: 8px 0;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+  display: inline-block;
 
   &:hover {
     & > a,
@@ -75,23 +72,26 @@ body,
     }
   }
 
+  & > span,
+  & > a {
+    display: inline-block;
+    color: $darkerColor;
+    padding: 8px 15px;
+    width: 100%;
+    text-align: center;
+  }
+
   & > span {
-    text-align: right;
     font-size: 12px;
     font-weight: bold;
-    color: $darkerColor;
-    display: inline-block;
     margin-top: 15px;
-    padding: 8px 15px 0;
+    padding-bottom: 0;
     text-transform: uppercase;
     @include opacity(0.7);
   }
 
   & > a {
-    padding: 8px 15px;
-    text-align: right;
     text-decoration: none;
-    color: $darkerColor;
     font-size: 14px;
 
     &:hover {
@@ -108,10 +108,11 @@ body,
 .wrapper {
   flex: 1;
   display: flex;
+  flex-direction: column;
   border: 15px solid $primaryColor;
+  overflow: auto;
 }
 .contentWrapper {
-  flex: 1;
-  margin-left: 150px;
-  overflow: auto;
+  text-align: center;
+  margin-bottom: 45px;
 }

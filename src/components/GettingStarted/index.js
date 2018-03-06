@@ -31,7 +31,12 @@ class GettingStarted extends Component {
           <title>Getting started - 8020DesignSchool.com</title>
         </Helmet>
 
-        <div className="sidebar">
+        <div className="contentWrapper" style={{ paddingTop: topSpace }}>
+          <Route exact path={match.url} component={Home} />
+          <Route path={`${match.url}/:topicId`} component={Topic} />
+        </div>
+
+        <div className="sidebar" style={{ paddingBottom: topSpace }}>
           <NavLink to={`${match.url}`} exact activeClassName="active">
             Introduction
           </NavLink>
@@ -84,14 +89,6 @@ class GettingStarted extends Component {
           <NavLink activeClassName="active" to={`${match.url}/function`}>
             Function
           </NavLink>
-        </div>
-
-        <div
-          className="contentWrapper"
-          style={{ paddingTop: topSpace, paddingBottom: topSpace }}
-        >
-          <Route exact path={match.url} component={Home} />
-          <Route path={`${match.url}/:topicId`} component={Topic} />
         </div>
       </div>
     );
