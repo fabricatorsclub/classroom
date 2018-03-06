@@ -1,0 +1,117 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  color: $darkerColor;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  @include box-sizing(border-box);
+  @include transition-property(all);
+  @include transition-duration(0.5s);
+}
+
+#root {
+  display: flex;
+}
+
+.dsgd-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.ChatBot {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100000;
+
+  & > div {
+    float: right;
+    display: inline-block;
+    clear: both;
+  }
+}
+
+.Home {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $primaryColor;
+
+  & > img {
+    @include filter(brightness(1000%));
+    max-width: 100px;
+    margin-bottom: 25px;
+  }
+  & h1 {
+    color: $lighterColor;
+    max-width: 650px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+.sidebar {
+  width: 300px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  &:hover {
+    & > a,
+    & > span {
+      @include opacity(0.3);
+    }
+  }
+
+  & > span {
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    color: $darkerColor;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px 0;
+    text-transform: uppercase;
+    @include opacity(0.7);
+  }
+
+  & > a {
+    padding: 8px 15px;
+    text-align: right;
+    text-decoration: none;
+    color: $darkerColor;
+    font-size: 14px;
+
+    &:hover {
+      @include opacity(1);
+    }
+
+    &.active {
+      color: $primaryColor;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+.wrapper {
+  flex: 1;
+  display: flex;
+  border: 15px solid $primaryColor;
+}
+.contentWrapper {
+  flex: 1;
+  margin-left: 150px;
+  overflow: auto;
+}

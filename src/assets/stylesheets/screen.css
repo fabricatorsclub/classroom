@@ -2,6 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
 /* line 5, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,4 +66,166 @@ a img {
 /* line 116, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 1, ../../../sass/partials/layout.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  color: #211842;
+}
+
+/* line 8, ../../../sass/partials/layout.scss */
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 15, ../../../sass/partials/layout.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+/* line 21, ../../../sass/partials/layout.scss */
+#root {
+  display: flex;
+}
+
+/* line 25, ../../../sass/partials/layout.scss */
+.dsgd-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+/* line 30, ../../../sass/partials/layout.scss */
+.ChatBot {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100000;
+}
+/* line 36, ../../../sass/partials/layout.scss */
+.ChatBot > div {
+  float: right;
+  display: inline-block;
+  clear: both;
+}
+
+/* line 43, ../../../sass/partials/layout.scss */
+.Home {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #845af7;
+}
+/* line 51, ../../../sass/partials/layout.scss */
+.Home > img {
+  -webkit-filter: brightness(1000%);
+  filter: brightness(1000%);
+  max-width: 100px;
+  margin-bottom: 25px;
+}
+/* line 56, ../../../sass/partials/layout.scss */
+.Home h1 {
+  color: #ffffff;
+  max-width: 650px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* line 64, ../../../sass/partials/layout.scss */
+.sidebar {
+  width: 300px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+/* line 72, ../../../sass/partials/layout.scss */
+.sidebar:hover > a, .sidebar:hover > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+/* line 78, ../../../sass/partials/layout.scss */
+.sidebar > span {
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #211842;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px 0;
+  text-transform: uppercase;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 90, ../../../sass/partials/layout.scss */
+.sidebar > a {
+  padding: 8px 15px;
+  text-align: right;
+  text-decoration: none;
+  color: #211842;
+  font-size: 14px;
+}
+/* line 97, ../../../sass/partials/layout.scss */
+.sidebar > a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 101, ../../../sass/partials/layout.scss */
+.sidebar > a.active {
+  color: #845af7;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 108, ../../../sass/partials/layout.scss */
+.wrapper {
+  flex: 1;
+  display: flex;
+  border: 15px solid #845af7;
+}
+
+/* line 113, ../../../sass/partials/layout.scss */
+.contentWrapper {
+  flex: 1;
+  margin-left: 150px;
+  overflow: auto;
+}
+
+/* line 1, ../../../sass/partials/components.scss */
+h1 {
+  font-size: 70px;
+  line-height: 82px;
+  font-weight: bold;
+}
+
+/* line 7, ../../../sass/partials/components.scss */
+h2 {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: bold;
+  margin: 0 0 25px;
+  max-width: 650px;
+}
+
+/* line 15, ../../../sass/partials/components.scss */
+p {
+  margin: 0 0 25px;
+  max-width: 650px;
 }

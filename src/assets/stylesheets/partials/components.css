@@ -1,0 +1,21 @@
+/* line 1, ../../../../sass/partials/components.scss */
+h1 {
+  font-size: 70px;
+  line-height: 82px;
+  font-weight: bold;
+}
+
+/* line 7, ../../../../sass/partials/components.scss */
+h2 {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: bold;
+  margin: 0 0 25px;
+  max-width: 650px;
+}
+
+/* line 15, ../../../../sass/partials/components.scss */
+p {
+  margin: 0 0 25px;
+  max-width: 650px;
+}
