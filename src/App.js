@@ -22,7 +22,7 @@ class App extends Component {
             <Chat />
 
             <Route exact path="/" component={Home} />
-            <Route path="/getting-started" component={GettingStarted} />
+            <Route path="/graphic-design" component={GettingStarted} />
           </div>
         </MuiThemeProvider>
       </Router>

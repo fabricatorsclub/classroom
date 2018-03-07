@@ -15,9 +15,11 @@ class Home extends Component {
         <img src={Logo} />
         <h1>Beginners guide to Graphic Design</h1>
 
-        <Link to="/getting-started">
+        <Link to="/graphic-design">
           <RaisedButton label="Let's get started" />
         </Link>
+
+        <iframe src="/bg/canvas_particles_waves.html" />
       </div>
     );
   }

@@ -19,7 +19,7 @@ class Chat extends Component {
 
     return (
       <div className="ChatBot">
-        {chatBot && (
+        <div style={{ display: !chatBot ? 'none' : '' }}>
           <ChatBot
             steps={[
               {
@@ -39,7 +39,8 @@ class Chat extends Component {
               },
             ]}
           />
-        )}
+        </div>
+
         <FloatingActionButton onClick={this.toggleChat}>
           {chatBot ? <CloseIcon /> : <ChatIcon />}
         </FloatingActionButton>

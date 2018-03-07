@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/logo.svg';
+import BrandName from '../../assets/images/logo-name.svg';
 import { Helmet } from 'react-helmet';
-import Home from './Home';
+import { NavLink } from 'react-router-dom';
+import Intro from './Intro';
+import VisualElements from './VisualElements';
+import DesignPrinciples from './DesignPrinciples';
 
 class GettingStarted extends Component {
   constructor(props) {
@@ -18,12 +21,41 @@ class GettingStarted extends Component {
 
   render() {
     const { match } = this.props;
-
     const { viewportHeight } = this.state;
-
     const topSpace = viewportHeight / 3;
 
-    console.log('viewportHeight', this.state.viewportHeight);
+    const Pill = ({ url, count, label }) => {
+      return (
+        <NavLink
+          className="pill"
+          activeClassName="active"
+          to={`${match.url}/${url}`}
+        >
+          <span className="num">{count}</span>
+          <span className="label">{label}</span>
+        </NavLink>
+      );
+    };
+
+    const VisEle = [
+      'Line',
+      'Colour',
+      'Shape',
+      'Texture',
+      'Space',
+      'Form',
+      'Typography',
+    ];
+    const DesgnPrin = [
+      'Contrast',
+      'Hierarchy',
+      'Alignment',
+      'Balance',
+      'Proximity',
+      'Repetition',
+      'Simplicity',
+      'Function',
+    ];
 
     return (
       <div className="wrapper">
@@ -31,74 +63,66 @@ class GettingStarted extends Component {
           <title>Getting started - 8020DesignSchool.com</title>
         </Helmet>
 
-        <div className="contentWrapper" style={{ paddingTop: topSpace }}>
-          <Route exact path={match.url} component={Home} />
-          <Route path={`${match.url}/:topicId`} component={Topic} />
+        <div className="header">
+          <div className="brand">
+            <img className="logo" src={Logo} width="30" />
+            <img className="BrandName" src={BrandName} width="180" />
+          </div>
+
+          <div className="menu">
+            <NavLink exact activeClassName="active" to="/">
+              Home
+            </NavLink>
+            <NavLink exact activeClassName="active" to={`${match.url}`}>
+              Introduction
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              to={`${match.url}/visual-elements`}
+            >
+              Visual Elements
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              to={`${match.url}/design-principles`}
+            >
+              Design Principles
+            </NavLink>
+          </div>
         </div>
 
-        <div className="sidebar" style={{ paddingBottom: topSpace }}>
-          <NavLink to={`${match.url}`} exact activeClassName="active">
-            Introduction
-          </NavLink>
-
-          <span>Visual Elements</span>
-          <NavLink activeClassName="active" to={`${match.url}/line`}>
-            Line
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/colour`}>
-            Colour
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/shape`}>
-            Shape
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/texture`}>
-            Texture
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/space`}>
-            Space
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/form`}>
-            Form
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/typography`}>
-            Typography
-          </NavLink>
-
-          <span>Design Principles</span>
-          <NavLink activeClassName="active" to={`${match.url}/contrast`}>
-            Contrast
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/hierarchy`}>
-            Hierarchy
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/alignment`}>
-            Alignment
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/balance`}>
-            Balance
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/proximity`}>
-            Proximity
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/repetition`}>
-            Repetition
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/simplicity`}>
-            Simplicity
-          </NavLink>
-          <NavLink activeClassName="active" to={`${match.url}/function`}>
-            Function
-          </NavLink>
+        <div
+          className="contentWrapper"
+          style={{ paddingTop: topSpace, paddingBottom: topSpace }}
+        >
+          <Route
+            exact
+            path={match.url}
+            render={props => (
+              <Intro
+                {...props}
+                VisEle={VisEle}
+                DesgnPrin={DesgnPrin}
+                Pill={Pill}
+              />
+            )}
+          />
+          <Route
+            path={`${match.url}/visual-elements`}
+            render={props => (
+              <VisualElements {...props} VisEle={VisEle} Pill={Pill} />
+            )}
+          />
+          <Route
+            path={`${match.url}/design-principles`}
+            render={props => (
+              <DesignPrinciples {...props} DesgnPrin={DesgnPrin} Pill={Pill} />
+            )}
+          />
         </div>
       </div>
     );
   }
 }
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-);
 
 export default GettingStarted;

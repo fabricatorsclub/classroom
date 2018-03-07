@@ -9,3 +9,8 @@
 @import 'partials/colors';
 @import 'partials/layout';
 @import 'partials/components';
+
+@font-face {
+  font-family: 'DSNum';
+  src: url('../fonts/DSNum.otf') format('opentype');
+}

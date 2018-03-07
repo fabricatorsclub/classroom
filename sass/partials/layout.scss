@@ -1,3 +1,6 @@
+@import 'compass/css3';
+@import 'colors';
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -48,6 +51,21 @@ body,
   justify-content: center;
   background: $primaryColor;
 
+  & > * {
+    position: relative;
+    z-index: 9;
+  }
+
+  & > iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    @include opacity(0.2);
+  }
+
   & > img {
     @include filter(brightness(1000%));
     max-width: 100px;
@@ -61,14 +79,52 @@ body,
   }
 }
 
-.sidebar {
+.ctaContainer {
   padding: 8px 0;
-  display: inline-block;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+
+  & h5 {
+    margin: 25px 0;
+  }
 
   &:hover {
     & > a,
     & > span {
       @include opacity(0.3);
+    }
+  }
+
+  & .pill {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #eaeef0;
+    @include box-shadow(2px 2px 4px 0 rgba(0, 0, 0, 0.1));
+    border-radius: 3px;
+    width: 185px;
+    padding: 30px;
+    margin: 0 15px 30px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+
+    & > span {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    & > .num {
+      font-family: 'DSNum';
+      font-size: 73px;
+      letter-spacing: -25px;
+      margin: 25px 0;
+      color: #eaeef0;
+    }
+    & > .label {
+      font-size: 18px;
+      margin: 15px 0 0;
     }
   }
 
@@ -115,4 +171,47 @@ body,
 .contentWrapper {
   text-align: center;
   margin-bottom: 45px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+
+  &:hover {
+    & > .brand {
+      & > .BrandName {
+        @include opacity(1);
+      }
+    }
+  }
+
+  & > .brand {
+    display: inline-block;
+
+    & > .logo {
+      margin-right: 10px;
+    }
+    & > .BrandName {
+      @include opacity(0);
+    }
+  }
+
+  & > .menu {
+    float: right;
+    font-size: 13px;
+
+    & > a {
+      display: inline-block;
+      padding: 5px 15px;
+      text-decoration: none;
+
+      &.active {
+        color: $primaryColor;
+        font-weight: bold;
+      }
+    }
+  }
 }
