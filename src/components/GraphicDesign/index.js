@@ -6,8 +6,8 @@ import BrandName from '../../assets/images/logo-name.svg';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import Intro from './Intro';
-import VisualElements from './VisualElements';
-import DesignPrinciples from './DesignPrinciples';
+import VisualElements from './VisualElements/';
+import DesignPrinciples from './DesignPrinciples/';
 
 class GettingStarted extends Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class GettingStarted extends Component {
 
     const VisEle = [
       'Line',
-      'Colour',
+      'Color',
       'Shape',
       'Texture',
       'Space',

@@ -5,7 +5,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Chat from './components/Chat';
 import Home from './components/Home';
-import GettingStarted from './components/GettingStarted';
+import GraphicDesign from './components/GraphicDesign';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -22,7 +22,7 @@ class App extends Component {
             <Chat />
 
             <Route exact path="/" component={Home} />
-            <Route path="/graphic-design" component={GettingStarted} />
+            <Route path="/graphic-design" component={GraphicDesign} />
           </div>
         </MuiThemeProvider>
       </Router>
