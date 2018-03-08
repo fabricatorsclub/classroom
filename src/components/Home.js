@@ -19,7 +19,7 @@ class Home extends Component {
           <RaisedButton label="Let's get started" />
         </Link>
 
-        <iframe src="http://practical-shaw-e14c3f.netlify.com/canvas_particles_waves.html" />
+        <iframe src="https://assets.8020designschool.com/canvas_particles_waves.html" />
       </div>
     );
   }
