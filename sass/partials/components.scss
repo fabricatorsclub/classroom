@@ -25,3 +25,12 @@ p {
   margin: 0 auto 25px;
   max-width: 650px;
 }
+
+a {
+  color: $darkerColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $primaryColor;
+  }
+}

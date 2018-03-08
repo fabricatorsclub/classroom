@@ -235,22 +235,21 @@ body,
 }
 /* line 149, ../../../sass/partials/layout.scss */
 .ctaContainer > a {
-  text-decoration: none;
   font-size: 14px;
 }
-/* line 153, ../../../sass/partials/layout.scss */
+/* line 152, ../../../sass/partials/layout.scss */
 .ctaContainer > a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 157, ../../../sass/partials/layout.scss */
+/* line 156, ../../../sass/partials/layout.scss */
 .ctaContainer > a.active {
   color: #845af7;
   font-size: 16px;
   font-weight: bold;
 }
 
-/* line 164, ../../../sass/partials/layout.scss */
+/* line 163, ../../../sass/partials/layout.scss */
 .wrapper {
   flex: 1;
   display: flex;
@@ -259,13 +258,13 @@ body,
   overflow: auto;
 }
 
-/* line 171, ../../../sass/partials/layout.scss */
+/* line 170, ../../../sass/partials/layout.scss */
 .contentWrapper {
   text-align: center;
   margin-bottom: 45px;
 }
 
-/* line 176, ../../../sass/partials/layout.scss */
+/* line 175, ../../../sass/partials/layout.scss */
 .header {
   position: fixed;
   top: 0;
@@ -273,36 +272,36 @@ body,
   right: 0;
   padding: 30px;
 }
-/* line 185, ../../../sass/partials/layout.scss */
+/* line 184, ../../../sass/partials/layout.scss */
 .header:hover > .brand > .BrandName {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 191, ../../../sass/partials/layout.scss */
+/* line 190, ../../../sass/partials/layout.scss */
 .header > .brand {
   display: inline-block;
 }
-/* line 194, ../../../sass/partials/layout.scss */
+/* line 193, ../../../sass/partials/layout.scss */
 .header > .brand > .logo {
   margin-right: 10px;
 }
-/* line 197, ../../../sass/partials/layout.scss */
+/* line 196, ../../../sass/partials/layout.scss */
 .header > .brand > .BrandName {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 202, ../../../sass/partials/layout.scss */
+/* line 201, ../../../sass/partials/layout.scss */
 .header > .menu {
   float: right;
   font-size: 13px;
 }
-/* line 206, ../../../sass/partials/layout.scss */
+/* line 205, ../../../sass/partials/layout.scss */
 .header > .menu > a {
   display: inline-block;
   padding: 5px 15px;
   text-decoration: none;
 }
-/* line 211, ../../../sass/partials/layout.scss */
+/* line 210, ../../../sass/partials/layout.scss */
 .header > .menu > a.active {
   color: #845af7;
   font-weight: bold;
@@ -337,6 +336,16 @@ h5 {
 p {
   margin: 0 auto 25px;
   max-width: 650px;
+}
+
+/* line 29, ../../../sass/partials/components.scss */
+a {
+  color: #211842;
+  text-decoration: none;
+}
+/* line 33, ../../../sass/partials/components.scss */
+a:hover {
+  color: #845af7;
 }
 
 @font-face {

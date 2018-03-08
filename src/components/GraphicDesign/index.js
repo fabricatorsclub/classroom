@@ -64,10 +64,10 @@ class GettingStarted extends Component {
         </Helmet>
 
         <div className="header">
-          <div className="brand">
+          <a href="/" className="brand">
             <img className="logo" src={Logo} width="30" />
             <img className="BrandName" src={BrandName} width="180" />
-          </div>
+          </a>
 
           <div className="menu">
             <NavLink exact activeClassName="active" to="/">

@@ -28,3 +28,13 @@ p {
   margin: 0 auto 25px;
   max-width: 650px;
 }
+
+/* line 29, ../../../../sass/partials/components.scss */
+a {
+  color: #211842;
+  text-decoration: none;
+}
+/* line 33, ../../../../sass/partials/components.scss */
+a:hover {
+  color: #845af7;
+}
