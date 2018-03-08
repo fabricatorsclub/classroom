@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <Helmet>
-          <title>Courses - 8020DesignSchool.com</title>
+          <title>Classroom - 8020DesignSchool.com</title>
         </Helmet>
 
         <img src={Logo} />
