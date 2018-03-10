@@ -14,7 +14,21 @@ class VisualElements extends Component {
     const { match, VisEle, Pill } = this.props;
 
     return (
-      <div>
+      <div className="subject">
+        <div className="innerNav">
+          {VisEle.map((data, i) => {
+            return (
+              <NavLink
+                key={i}
+                activeClassName="active"
+                to={`${match.url}/${data.toLowerCase()}`}
+              >
+                {data}
+              </NavLink>
+            );
+          })}
+        </div>
+
         <Route
           exact
           path={`${match.url}`}

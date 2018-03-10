@@ -1,0 +1,49 @@
+/* line 5, ../../../../sass/partials/course.scss */
+.subject .innerNav {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 70px;
+  bottom: 70px;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 16, ../../../../sass/partials/course.scss */
+.subject .innerNav:hover > a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 21, ../../../../sass/partials/course.scss */
+.subject .innerNav > a {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  padding: 7px 15px 7px 30px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+/* line 29, ../../../../sass/partials/course.scss */
+.subject .innerNav > a.active {
+  color: #f35025;
+  position: relative;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 34, ../../../../sass/partials/course.scss */
+.subject .innerNav > a.active:before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f35025;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 15px;
+}

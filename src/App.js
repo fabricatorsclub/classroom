@@ -9,7 +9,7 @@ import GraphicDesign from './components/GraphicDesign';
 
 const muiTheme = getMuiTheme({
   palette: {
-    primary1Color: '#845af7',
+    primary1Color: '#f35025',
   },
 });
 

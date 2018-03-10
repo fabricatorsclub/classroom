@@ -1,0 +1,50 @@
+@import 'compass/css3';
+@import 'colors';
+
+.subject {
+  & .innerNav {
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 70px;
+    bottom: 70px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+
+    &:hover {
+      & > a {
+        @include opacity(1);
+      }
+    }
+
+    & > a {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      font-size: 13px;
+      padding: 7px 15px 7px 30px;
+      @include opacity(0.4);
+
+      &.active {
+        color: $primaryColor;
+        position: relative;
+        @include opacity(1);
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: $primaryColor;
+          @include border-radius(5px);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: 15px;
+        }
+      }
+    }
+  }
+}

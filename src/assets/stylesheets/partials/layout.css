@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 25px;
-  color: #211842;
+  color: #1c1625;
 }
 
 /* line 11, ../../../../sass/partials/layout.scss */
@@ -61,7 +61,7 @@ body,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #845af7;
+  background: #f35025;
 }
 /* line 54, ../../../../sass/partials/layout.scss */
 .Home > * {
@@ -105,12 +105,7 @@ body,
 .ctaContainer h5 {
   margin: 25px 0;
 }
-/* line 93, ../../../../sass/partials/layout.scss */
-.ctaContainer:hover > a, .ctaContainer:hover > span {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-  opacity: 0.3;
-}
-/* line 99, ../../../../sass/partials/layout.scss */
+/* line 92, ../../../../sass/partials/layout.scss */
 .ctaContainer .pill {
   display: inline-block;
   background: #fff;
@@ -126,13 +121,27 @@ body,
   text-align: center;
   text-decoration: none;
 }
-/* line 112, ../../../../sass/partials/layout.scss */
+/* line 105, ../../../../sass/partials/layout.scss */
+.ctaContainer .pill:hover {
+  -moz-box-shadow: 2px 10px 20px 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 2px 10px 20px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+/* line 108, ../../../../sass/partials/layout.scss */
+.ctaContainer .pill:hover > .num {
+  color: #6e0025;
+}
+/* line 111, ../../../../sass/partials/layout.scss */
+.ctaContainer .pill:hover > .label {
+  color: #f35025;
+}
+/* line 116, ../../../../sass/partials/layout.scss */
 .ctaContainer .pill > span {
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-/* line 118, ../../../../sass/partials/layout.scss */
+/* line 122, ../../../../sass/partials/layout.scss */
 .ctaContainer .pill > .num {
   font-family: 'DSNum';
   font-size: 73px;
@@ -140,20 +149,20 @@ body,
   margin: 25px 0;
   color: #eaeef0;
 }
-/* line 125, ../../../../sass/partials/layout.scss */
+/* line 129, ../../../../sass/partials/layout.scss */
 .ctaContainer .pill > .label {
   font-size: 18px;
   margin: 15px 0 0;
 }
-/* line 131, ../../../../sass/partials/layout.scss */
+/* line 135, ../../../../sass/partials/layout.scss */
 .ctaContainer > span, .ctaContainer > a {
   display: inline-block;
-  color: #211842;
+  color: #1c1625;
   padding: 8px 15px;
   width: 100%;
   text-align: center;
 }
-/* line 140, ../../../../sass/partials/layout.scss */
+/* line 144, ../../../../sass/partials/layout.scss */
 .ctaContainer > span {
   font-size: 12px;
   font-weight: bold;
@@ -163,76 +172,76 @@ body,
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 149, ../../../../sass/partials/layout.scss */
+/* line 153, ../../../../sass/partials/layout.scss */
 .ctaContainer > a {
   font-size: 14px;
 }
-/* line 152, ../../../../sass/partials/layout.scss */
+/* line 156, ../../../../sass/partials/layout.scss */
 .ctaContainer > a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 156, ../../../../sass/partials/layout.scss */
+/* line 160, ../../../../sass/partials/layout.scss */
 .ctaContainer > a.active {
-  color: #845af7;
+  color: #f35025;
   font-size: 16px;
   font-weight: bold;
 }
 
-/* line 163, ../../../../sass/partials/layout.scss */
+/* line 167, ../../../../sass/partials/layout.scss */
 .wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
-  border: 15px solid #845af7;
   overflow: auto;
 }
 
-/* line 170, ../../../../sass/partials/layout.scss */
+/* line 173, ../../../../sass/partials/layout.scss */
 .contentWrapper {
   text-align: center;
   margin-bottom: 45px;
 }
 
-/* line 175, ../../../../sass/partials/layout.scss */
+/* line 178, ../../../../sass/partials/layout.scss */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
 }
-/* line 184, ../../../../sass/partials/layout.scss */
+/* line 188, ../../../../sass/partials/layout.scss */
 .header:hover > .brand > .BrandName {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 190, ../../../../sass/partials/layout.scss */
+/* line 194, ../../../../sass/partials/layout.scss */
 .header > .brand {
   display: inline-block;
 }
-/* line 193, ../../../../sass/partials/layout.scss */
+/* line 197, ../../../../sass/partials/layout.scss */
 .header > .brand > .logo {
   margin-right: 10px;
 }
-/* line 196, ../../../../sass/partials/layout.scss */
+/* line 200, ../../../../sass/partials/layout.scss */
 .header > .brand > .BrandName {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 201, ../../../../sass/partials/layout.scss */
+/* line 205, ../../../../sass/partials/layout.scss */
 .header > .menu {
   float: right;
   font-size: 13px;
 }
-/* line 205, ../../../../sass/partials/layout.scss */
+/* line 209, ../../../../sass/partials/layout.scss */
 .header > .menu > a {
   display: inline-block;
   padding: 5px 15px;
   text-decoration: none;
 }
-/* line 210, ../../../../sass/partials/layout.scss */
+/* line 214, ../../../../sass/partials/layout.scss */
 .header > .menu > a.active {
-  color: #845af7;
+  color: #f35025;
   font-weight: bold;
 }

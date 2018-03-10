@@ -20,7 +20,7 @@ h5 {
   font-weight: bold;
   font-size: 13px;
   margin: 0 0 25px;
-  color: #845af7;
+  color: #f35025;
 }
 
 /* line 24, ../../../../sass/partials/components.scss */
@@ -31,10 +31,10 @@ p {
 
 /* line 29, ../../../../sass/partials/components.scss */
 a {
-  color: #211842;
+  color: #1c1625;
   text-decoration: none;
 }
 /* line 33, ../../../../sass/partials/components.scss */
 a:hover {
-  color: #845af7;
+  color: #f35025;
 }

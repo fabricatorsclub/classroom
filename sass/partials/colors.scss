@@ -1,4 +1,12 @@
-$primaryColor: #845af7;
+$darker-brand-color: #1c1625;
+$dark-brand-color: #350d25;
+$mid-dark-brand-color: #6e0025;
+$light-brand-color: #d21925;
+$lighter-brand-color: #f35025;
+$primary-color: $lighter-brand-color;
+$primary-color-darker: $light-brand-color;
+
+$primaryColor: $lighter-brand-color;
 $lighterColor: #ffffff;
-$darkerColor: #211842;
-$greyColor: #615f69;
+$darkerColor: $darker-brand-color;
+$greyColor: rgba($darker-brand-color, 0.7);
