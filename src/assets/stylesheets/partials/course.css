@@ -3,36 +3,42 @@
   position: fixed;
   display: flex;
   left: 0;
-  top: 70px;
-  bottom: 70px;
-  margin: auto;
-  flex-direction: column;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  flex-direction: row;
   justify-content: center;
+  z-index: 1;
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 }
-/* line 16, ../../../../sass/partials/course.scss */
+/* line 18, ../../../../sass/partials/course.scss */
 .subject .innerNav:hover > a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 21, ../../../../sass/partials/course.scss */
+/* line 23, ../../../../sass/partials/course.scss */
 .subject .innerNav > a {
   display: inline-block;
-  width: 100%;
-  text-align: left;
-  font-size: 13px;
-  padding: 7px 15px 7px 30px;
+  padding: 10px 15px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  min-width: 120px;
 }
-/* line 29, ../../../../sass/partials/course.scss */
+/* line 33, ../../../../sass/partials/course.scss */
 .subject .innerNav > a.active {
   color: #f35025;
-  font-weight: bold;
   position: relative;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
+  font-size: 13px;
 }
-/* line 35, ../../../../sass/partials/course.scss */
+/* line 39, ../../../../sass/partials/course.scss */
 .subject .innerNav > a.active:before {
   content: '';
   display: inline-block;
@@ -43,45 +49,71 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
   position: absolute;
+  right: 0;
+  margin: auto;
+  left: 0;
+  top: -4px;
+}
+/* line 56, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper {
+  max-width: 960px;
+  margin: auto;
+  position: relative;
+  padding-left: 450px;
+}
+/* line 62, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .graphic-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 405px;
+  height: 500px;
+  position: fixed;
+  left: 0;
+  right: 570px;
+  margin: auto;
   top: 0;
   bottom: 0;
-  margin: auto;
-  left: 15px;
 }
-/* line 52, ../../../../sass/partials/course.scss */
-.subject .subject-content {
-  max-width: 650px;
-  margin: auto;
+/* line 75, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .graphic-holder img {
+  width: 100%;
 }
-/* line 59, ../../../../sass/partials/course.scss */
-.subject .subject-content > img {
+/* line 80, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content {
+  max-width: 450px;
+  display: inline-block;
+  text-align: left;
+}
+/* line 88, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content > img {
   margin: 45px 0 15px;
 }
-/* line 63, ../../../../sass/partials/course.scss */
-.subject .subject-content h5 {
+/* line 92, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content h5 {
   margin: 45px 0 15px;
 }
-/* line 66, ../../../../sass/partials/course.scss */
-.subject .subject-content strong {
+/* line 95, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content strong {
   font-weight: bold;
 }
-/* line 70, ../../../../sass/partials/course.scss */
-.subject .subject-content p {
+/* line 99, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content p {
   line-height: 1.5;
 }
-/* line 73, ../../../../sass/partials/course.scss */
-.subject .subject-content ul {
+/* line 102, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content ul {
   margin: 25px;
 }
-/* line 76, ../../../../sass/partials/course.scss */
-.subject .subject-content ul li {
+/* line 105, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content ul li {
   margin: 0 0 25px;
   padding-left: 25px;
   text-align: left;
   position: relative;
 }
-/* line 82, ../../../../sass/partials/course.scss */
-.subject .subject-content ul li:before {
+/* line 111, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content ul li:before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -94,14 +126,14 @@
   top: 8px;
   left: 0;
 }
-/* line 94, ../../../../sass/partials/course.scss */
-.subject .subject-content ul li > strong {
+/* line 123, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content ul li > strong {
   display: inline-block;
   width: 100%;
   margin: 0 0 5px;
 }
-/* line 103, ../../../../sass/partials/course.scss */
-.subject .subject-content .examples img {
+/* line 132, ../../../../sass/partials/course.scss */
+.subject .subject-wrapper .subject-content .examples img {
   max-width: 44%;
   margin: 3%;
 }

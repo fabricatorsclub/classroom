@@ -6,11 +6,13 @@
     position: fixed;
     display: flex;
     left: 0;
-    top: 70px;
-    bottom: 70px;
-    margin: auto;
-    flex-direction: column;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    flex-direction: row;
     justify-content: center;
+    z-index: 1;
+    @include box-shadow(0px 0px 15px 0px rgba(0,0,0,0.1));
 
     &:hover {
       & > a {
@@ -20,17 +22,19 @@
 
     & > a {
       display: inline-block;
-      width: 100%;
-      text-align: left;
-      font-size: 13px;
-      padding: 7px 15px 7px 30px;
+      padding: 10px 15px;
       @include opacity(0.4);
+      position: relative;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 11px;
+      min-width: 120px;
 
       &.active {
         color: $primaryColor;
-        font-weight: bold;
         position: relative;
         @include opacity(1);
+        font-size: 13px;
 
         &:before {
           content: '';
@@ -40,69 +44,95 @@
           background: $primaryColor;
           @include border-radius(5px);
           position: absolute;
-          top: 0;
-          bottom: 0;
+          right: 0;
           margin: auto;
-          left: 15px;
+          left: 0;
+          top: -4px;
         }
       }
     }
   }
 
-  & .subject-content {
-    max-width: 650px;
+  & .subject-wrapper {
+    max-width: 960px;
     margin: auto;
+    position: relative;
+    padding-left: 450px;
 
-    & h2 {
-    }
+    & .graphic-holder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 405px;
+      height: 500px;
+      position: fixed;
+      left: 0;
+      right: 570px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
 
-    & > img {
-      margin: 45px 0 15px;
-    }
-
-    & h5 {
-      margin: 45px 0 15px;
-    }
-    & strong {
-      font-weight: bold;
-    }
-
-    & p {
-      line-height: 1.5;
-    }
-    & ul {
-      margin: 25px;
-
-      & li {
-        margin: 0 0 25px;
-        padding-left: 25px;
-        text-align: left;
-        position: relative;
-
-        &:before {
-          content: '';
-          display: inline-block;
-          width: 8px;
-          height: 8px;
-          background: $primaryColor;
-          @include border-radius(5px);
-          position: absolute;
-          top: 8px;
-          left: 0;
-        }
-
-        & > strong {
-          display: inline-block;
-          width: 100%;
-          margin: 0 0 5px;
-        }
+      & img {
+        width: 100%;
       }
     }
 
-    & .examples {
-      & img {
-        max-width: 44%;
-        margin: 3%;
+    & .subject-content {
+      max-width: 450px;
+      display: inline-block;
+      text-align: left;
+
+      & h2 {
+      }
+
+      & > img {
+        margin: 45px 0 15px;
+      }
+
+      & h5 {
+        margin: 45px 0 15px;
+      }
+      & strong {
+        font-weight: bold;
+      }
+
+      & p {
+        line-height: 1.5;
+      }
+      & ul {
+        margin: 25px;
+
+        & li {
+          margin: 0 0 25px;
+          padding-left: 25px;
+          text-align: left;
+          position: relative;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: $primaryColor;
+            @include border-radius(5px);
+            position: absolute;
+            top: 8px;
+            left: 0;
+          }
+
+          & > strong {
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 5px;
+          }
+        }
+      }
+
+      & .examples {
+        & img {
+          max-width: 44%;
+          margin: 3%;
+        }
       }
     }
   }

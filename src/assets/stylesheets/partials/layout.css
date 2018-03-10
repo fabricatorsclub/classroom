@@ -208,39 +208,40 @@ body,
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   padding: 15px;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 188, ../../../../sass/partials/layout.scss */
+/* line 189, ../../../../sass/partials/layout.scss */
 .header:hover > .brand > .BrandName {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 194, ../../../../sass/partials/layout.scss */
+/* line 195, ../../../../sass/partials/layout.scss */
 .header > .brand {
   display: inline-block;
 }
-/* line 197, ../../../../sass/partials/layout.scss */
+/* line 198, ../../../../sass/partials/layout.scss */
 .header > .brand > .logo {
   margin-right: 10px;
 }
-/* line 200, ../../../../sass/partials/layout.scss */
+/* line 201, ../../../../sass/partials/layout.scss */
 .header > .brand > .BrandName {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 205, ../../../../sass/partials/layout.scss */
+/* line 206, ../../../../sass/partials/layout.scss */
 .header > .menu {
   float: right;
   font-size: 13px;
 }
-/* line 209, ../../../../sass/partials/layout.scss */
+/* line 210, ../../../../sass/partials/layout.scss */
 .header > .menu > a {
   display: inline-block;
   padding: 5px 15px;
   text-decoration: none;
 }
-/* line 214, ../../../../sass/partials/layout.scss */
+/* line 215, ../../../../sass/partials/layout.scss */
 .header > .menu > a.active {
   color: #f35025;
   font-weight: bold;
