@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 class Color extends Component {
   render() {
-    return <div>Color</div>;
+    return (
+      <div className="subject-content">
+        <h2>Color</h2>
+      </div>
+    );
   }
 }
 

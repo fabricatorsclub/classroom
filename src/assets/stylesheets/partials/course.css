@@ -27,11 +27,12 @@
 /* line 29, ../../../../sass/partials/course.scss */
 .subject .innerNav > a.active {
   color: #f35025;
+  font-weight: bold;
   position: relative;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 34, ../../../../sass/partials/course.scss */
+/* line 35, ../../../../sass/partials/course.scss */
 .subject .innerNav > a.active:before {
   content: '';
   display: inline-block;
@@ -46,4 +47,61 @@
   bottom: 0;
   margin: auto;
   left: 15px;
+}
+/* line 52, ../../../../sass/partials/course.scss */
+.subject .subject-content {
+  max-width: 650px;
+  margin: auto;
+}
+/* line 59, ../../../../sass/partials/course.scss */
+.subject .subject-content > img {
+  margin: 45px 0 15px;
+}
+/* line 63, ../../../../sass/partials/course.scss */
+.subject .subject-content h5 {
+  margin: 45px 0 15px;
+}
+/* line 66, ../../../../sass/partials/course.scss */
+.subject .subject-content strong {
+  font-weight: bold;
+}
+/* line 70, ../../../../sass/partials/course.scss */
+.subject .subject-content p {
+  line-height: 1.5;
+}
+/* line 73, ../../../../sass/partials/course.scss */
+.subject .subject-content ul {
+  margin: 25px;
+}
+/* line 76, ../../../../sass/partials/course.scss */
+.subject .subject-content ul li {
+  margin: 0 0 25px;
+  padding-left: 25px;
+  text-align: left;
+  position: relative;
+}
+/* line 82, ../../../../sass/partials/course.scss */
+.subject .subject-content ul li:before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f35025;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+/* line 94, ../../../../sass/partials/course.scss */
+.subject .subject-content ul li > strong {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 5px;
+}
+/* line 103, ../../../../sass/partials/course.scss */
+.subject .subject-content .examples img {
+  max-width: 44%;
+  margin: 3%;
 }

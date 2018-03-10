@@ -28,6 +28,7 @@
 
       &.active {
         color: $primaryColor;
+        font-weight: bold;
         position: relative;
         @include opacity(1);
 
@@ -44,6 +45,64 @@
           margin: auto;
           left: 15px;
         }
+      }
+    }
+  }
+
+  & .subject-content {
+    max-width: 650px;
+    margin: auto;
+
+    & h2 {
+    }
+
+    & > img {
+      margin: 45px 0 15px;
+    }
+
+    & h5 {
+      margin: 45px 0 15px;
+    }
+    & strong {
+      font-weight: bold;
+    }
+
+    & p {
+      line-height: 1.5;
+    }
+    & ul {
+      margin: 25px;
+
+      & li {
+        margin: 0 0 25px;
+        padding-left: 25px;
+        text-align: left;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: $primaryColor;
+          @include border-radius(5px);
+          position: absolute;
+          top: 8px;
+          left: 0;
+        }
+
+        & > strong {
+          display: inline-block;
+          width: 100%;
+          margin: 0 0 5px;
+        }
+      }
+    }
+
+    & .examples {
+      & img {
+        max-width: 44%;
+        margin: 3%;
       }
     }
   }
